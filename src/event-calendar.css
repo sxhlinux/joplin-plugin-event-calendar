@@ -3,12 +3,19 @@
   flex-wrap: wrap;
 }
 
+.event-calendar .break {
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  border: none;
+}
+
 .event-calendar .group {
   text-align: center;
-  width: 36px;
-  height: 26px;
+  width: 50px;
+  height: 42px;
   margin: 0 4px 4px 0;
-  border-top: 10px solid rgba(255, 140, 140, 1);
+  border-top: 5px solid rgb(118, 197, 239);
   border-right: 1px solid rgba(20, 20, 20, 0.7);
   border-bottom: 1px solid rgba(20, 20, 20, 0.7);
   border-left: 1px solid rgba(20, 20, 20, 0.2);
@@ -28,6 +35,10 @@
 }
 
 .event-calendar .group .icon.primary {
+  font-weight: bold;
+}
+
+.event-calendar .group .icon.year {
   font-weight: bold;
 }
 
@@ -53,21 +64,23 @@
   font-size: 2.5vw;
 }
 
-.event-calendar .group .hover-card .event .date {
-}
-
 .event-calendar .group .hover-card .event .title {
   font-size: 2.7vw;
   font-weight: bold;
   margin: 0;
 }
 
+.event-calendar .group .hover-card .event .date {
+}
+
 .event-calendar .group .hover-card .event .text {
+  text-align: left;
+  word-wrap: inherit;
 }
 
 .event-calendar .group:hover {
   cursor: pointer;
-  border-top: 10px solid rgba(255, 140, 140, 1);
+  border-top: 5px solid rgb(150, 140, 255);
   border-right: 1px solid rgba(20, 20, 20, 1);
   border-bottom: 1px solid rgba(20, 20, 20, 1);
   border-left: 1px solid rgba(20, 20, 20, 1);

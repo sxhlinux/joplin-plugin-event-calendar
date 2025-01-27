@@ -1,3 +1,4 @@
+import { ht } from "date-fns/locale";
 import { Event } from "../../types";
 import { generateRandomColor } from "../../utilities";
 
@@ -59,7 +60,7 @@ export default abstract class GroupRenderer {
     if (event.icon) {
       html.textContent = event.icon;
     } else {
-      html.textContent = event.title.slice(0, 2);
+      html.textContent = event.title.slice(0, 4);
     }
 
     return html;
@@ -89,6 +90,8 @@ export default abstract class GroupRenderer {
       htmlEventDate.className = "date";
       htmlEventDate.textContent = event.date.toLocaleDateString(undefined, {
         weekday: "long",
+        year: "numeric",
+        month: "long",
         day: "numeric",
       });
       const htmlEventTitle = document.createElement("p");

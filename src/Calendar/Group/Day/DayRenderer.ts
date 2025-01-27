@@ -19,9 +19,16 @@ export default class DayRenderer extends GroupRenderer {
     const dayInMonth = eventDate.getDate();
 
     if (dayInMonth === 1) {
-      html.textContent = eventDate
-        .toLocaleDateString(undefined, { month: "long" })
-        .slice(0, 3);
+      if (eventDate.getMonth() === 0) {
+        html.textContent = eventDate.toLocaleDateString(undefined, {
+          year: "numeric",
+        });
+      }
+      else {
+        html.textContent = eventDate
+          .toLocaleDateString(undefined, { month: "long" })
+          .slice(0, 3);
+      }
       html.className += " primary";
     } else {
       html.textContent = dayInMonth.toString();

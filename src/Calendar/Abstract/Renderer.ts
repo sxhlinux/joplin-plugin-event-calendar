@@ -28,7 +28,14 @@ export default abstract class Renderer {
   public render(): HTMLDivElement {
     const groups = this._renderGroups();
 
-    groups.forEach((group) => this.container.appendChild(group));
+    groups.forEach((group) => {
+      if (group.firstElementChild.className === 'icon primary') {
+        const grp = document.createElement('div');
+        grp.className = 'break';
+        this.container.appendChild(grp);
+      }
+      this.container.appendChild(group);
+    });
 
     return this.container;
   }
