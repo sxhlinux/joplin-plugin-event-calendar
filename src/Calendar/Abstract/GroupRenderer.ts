@@ -62,6 +62,8 @@ export default abstract class GroupRenderer {
     } else {
       html.textContent = event.title.slice(0, 4);
     }
+    html.style.textAlign = "left";
+    html.style.display = "inline-block";
 
     return html;
   }
