@@ -11,6 +11,15 @@ It creates a calendar view of events that have been specified using the [YAML](h
 
 ![preview](./DOCS/preview_day.png)
 
+## compile&package
+```bash
+npm install -g yo@4.3.1
+npm install -g generator-joplin
+npm install --save-dev webpack webpack-cli
+npm run dist
+```
+在publish目录下产出的jpl文件就可以直接用了
+
 ## Features
 
 - A grouping that contains no events will show the **date** (day grouping), **week number** (week grouping), **month** (month grouping), or **year** (year grouping)
