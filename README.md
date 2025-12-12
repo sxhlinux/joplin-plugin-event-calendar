@@ -13,8 +13,7 @@ It creates a calendar view of events that have been specified using the [YAML](h
 
 ## compile&package
 ```bash
-npm install -g yo@4.3.1
-npm install -g generator-joplin
+npm install -g yo generator-joplin
 npm install --save-dev webpack webpack-cli
 npm run dist
 ```
